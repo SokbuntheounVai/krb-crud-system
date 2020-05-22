@@ -1,6 +1,6 @@
 # krb-crud-system
 
-This project used php.
+This project used php, ajax.
 
 Function :
 - Create
