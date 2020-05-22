@@ -56,9 +56,9 @@ function template_phone_sms($phone, $newpass)
 {
     require_once('../vender/twilio/sdk/src/Twilio/autoload.php');
 
-    $account_sid = "ACf34df9de236199591a6d0847344a3bdb";
-    $auth_token = "13e4dc05e59e4b3bd83a4f6faece1180";
-    $twilio_number = "+12059906902";
+    $account_sid = "your id";
+    $auth_token = "your token";
+    $twilio_number = "your phone";
     $client = new Client($account_sid, $auth_token);
 
     $client->messages->create(
@@ -153,7 +153,7 @@ function reset_password($email)
         $i = query_data("UPDATE tbl_users_info SET password = '$password' WHERE email = '$email'");
         if ($i) {
             echo 'success';
-            template_send_mail('ceetrolamo555@gmail.com', 'cambodia555', $data['email'], 'Reset Password', template_msg($data['username'], $newPass));
+            template_send_mail('your emal', 'your password', $data['email'], 'Reset Password', template_msg($data['username'], $newPass));
         } else {
             echo "<div class = 'alert alert-danger alert-dismissible fade show' role = 'alert' >
             <strong> Fail! </strong> Your email not match. 
